@@ -2,43 +2,51 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Divertida Mente</title>
 
     <style>
+
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-            background: linear-gradient(135deg, #dff4ff, #fff1d6);
-            padding: 30px;
+            background: linear-gradient(135deg, #dff6ff, #fff3d6);
         }
 
         h1 {
-            color: #ff6b35;
             font-size: 45px;
+            color: #ff6b35;
+            margin-top: 30px;
         }
 
         p {
             font-size: 20px;
+            color: #333;
         }
 
         .container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .emocao {
             width: 180px;
-            min-height: 230px;
-            padding: 15px;
+            height: 250px;
             border-radius: 25px;
+            padding: 15px;
             color: white;
-            font-size: 23px;
+            font-size: 24px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+            transition: transform 0.3s;
         }
 
         .emocao:hover {
@@ -46,40 +54,47 @@
         }
 
         .emocao img {
-            width: 150px;
-            height: 170px;
+            width: 160px;
+            height: 190px;
             object-fit: contain;
-            display: block;
-            margin: auto;
         }
 
+        /* Cores das emoções */
+
         #alegria {
-            background-color: #ffd21f;
+            background-color: #FFD21F;
         }
 
         #tristeza {
-            background-color: #3185d6;
+            background-color: #3185D6;
         }
 
         #raiva {
-            background-color: #e53935;
+            background-color: #E53935;
         }
 
         #medo {
-            background-color: #7048a8;
+            background-color: #7048A8;
         }
 
         #nojinho {
-            background-color: #48a868;
+            background-color: #48A868;
         }
 
         #mensagem {
-            margin-top: 35px;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 700px;
+
             font-size: 24px;
             font-weight: bold;
-            color: #333;
-            min-height: 50px;
+
+            background-color: white;
+            border-radius: 20px;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
+
     </style>
 </head>
 
@@ -87,76 +102,108 @@
 
     <h1>🧠 Divertida Mente</h1>
 
-    <p>Clique em uma emoção para descobrir mais!</p>
+    <p>
+        Conheça as emoções de Riley!
+        Clique em um personagem.
+    </p>
+
 
     <div class="container">
 
         <!-- ALEGRIA -->
-        <div class="emocao" id="alegria"
-            onclick="mostrar('Alegria: ela tenta deixar Riley feliz e otimista! 😊')">
 
-            <img src="https://www.pngwing.com/en/free-png-ngkek"
-                 alt="Alegria">
+        <div class="emocao"
+             id="alegria"
+             onclick="mostrar('😊 Alegria: representa a felicidade e tenta deixar Riley feliz!')">
+
+            <img src="alegria.png" alt="Alegria">
+
+            <br>
 
             Alegria
+
         </div>
 
 
         <!-- TRISTEZA -->
-        <div class="emocao" id="tristeza"
-            onclick="mostrar('Tristeza: ela mostra que ficar triste também faz parte da vida. 💙')">
 
-            <img src="https://www.kindpng.com/picc/m/51-511477_sadness-inside-out-png-transparent-png.png"
-                 alt="Tristeza">
+        <div class="emocao"
+             id="tristeza"
+             onclick="mostrar('💙 Tristeza: mostra que ficar triste também faz parte da vida.')">
+
+            <img src="tristeza.png" alt="Tristeza">
+
+            <br>
 
             Tristeza
+
         </div>
 
 
         <!-- RAIVA -->
-        <div class="emocao" id="raiva"
-            onclick="mostrar('Raiva: aparece quando algo deixa Riley muito irritada! 😡')">
 
-            <img src="https://www.pngwing.com/en/free-png-ngkek"
-                 alt="Raiva">
+        <div class="emocao"
+             id="raiva"
+             onclick="mostrar('😡 Raiva: aparece quando Riley fica irritada ou acha que algo é injusto.')">
+
+            <img src="raiva.png" alt="Raiva">
+
+            <br>
 
             Raiva
+
         </div>
 
 
         <!-- MEDO -->
-        <div class="emocao" id="medo"
-            onclick="mostrar('Medo: tenta proteger Riley de situações perigosas ou assustadoras! 😨')">
 
-            <img src="https://www.pngwing.com/en/free-png-avkqv"
-                 alt="Medo">
+        <div class="emocao"
+             id="medo"
+             onclick="mostrar('😨 Medo: tenta proteger Riley de situações perigosas.')">
+
+            <img src="medo.png" alt="Medo">
+
+            <br>
 
             Medo
+
         </div>
 
 
         <!-- NOJINHO -->
-        <div class="emocao" id="nojinho"
-            onclick="mostrar('Nojinho: ajuda Riley a evitar coisas desagradáveis! 🤢')">
 
-            <img src="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Cartoons-PNG/Disgust_Inside_Out_Transparent_PNG_Image.png?m=1629830204"
-                 alt="Nojinho">
+        <div class="emocao"
+             id="nojinho"
+             onclick="mostrar('🤢 Nojinho: ajuda Riley a evitar coisas desagradáveis.')">
+
+            <img src="nojinho.png" alt="Nojinho">
+
+            <br>
 
             Nojinho
+
         </div>
 
     </div>
 
-    <div id="mensagem"></div>
+
+    <div id="mensagem">
+        Clique em uma emoção! 👆
+    </div>
 
 
     <script>
+
         function mostrar(texto) {
-            document.getElementById("mensagem").innerText = texto;
+
+            document.getElementById("mensagem").innerHTML = texto;
+
         }
+
     </script>
 
 </body>
 </html>
+
 
 
