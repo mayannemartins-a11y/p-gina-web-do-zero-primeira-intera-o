@@ -14,29 +14,63 @@
 
         h1 {
             color: #ff6b35;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
         }
 
         .emocao {
             display: inline-block;
-            width: 150px;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 15px;
+            width: 180px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 20px;
             color: white;
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: bold;
             cursor: pointer;
+            transition: 0.3s;
         }
 
-        #alegria { background-color: #ffd21f; }
-        #tristeza { background-color: #3185d6; }
-        #raiva { background-color: #e53935; }
-        #medo { background-color: #7048a8; }
-        #nojinho { background-color: #48a868; }
+        .emocao:hover {
+            transform: scale(1.08);
+        }
+
+        .emocao img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+
+        #alegria {
+            background-color: #ffd21f;
+        }
+
+        #tristeza {
+            background-color: #3185d6;
+        }
+
+        #raiva {
+            background-color: #e53935;
+        }
+
+        #medo {
+            background-color: #7048a8;
+        }
+
+        #nojinho {
+            background-color: #48a868;
+        }
 
         #mensagem {
             margin-top: 30px;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
+            min-height: 40px;
         }
     </style>
 </head>
@@ -45,25 +79,50 @@
 
     <h1>🧠 Divertida Mente</h1>
 
-    <p>Clique em uma emoção para descobrir uma mensagem!</p>
+    <p>Conheça as emoções! Clique em um personagem:</p>
 
-    <div class="emocao" id="alegria" onclick="mostrar('Alegria: tente sempre encontrar algo bom! 😊')">
+    <!-- ALEGRIA -->
+    <div class="emocao" id="alegria"
+        onclick="mostrar('Alegria: tente sempre encontrar algo bom! 😊')">
+
+        <img src="alegria.png" alt="Alegria">
+
         Alegria
     </div>
 
-    <div class="emocao" id="tristeza" onclick="mostrar('Tristeza: tudo bem ficar triste às vezes. 💙')">
+    <!-- TRISTEZA -->
+    <div class="emocao" id="tristeza"
+        onclick="mostrar('Tristeza: tudo bem ficar triste às vezes. 💙')">
+
+        <img src="tristeza.png" alt="Tristeza">
+
         Tristeza
     </div>
 
-    <div class="emocao" id="raiva" onclick="mostrar('Raiva: respire fundo e tente se acalmar! 😡')">
+    <!-- RAIVA -->
+    <div class="emocao" id="raiva"
+        onclick="mostrar('Raiva: respire fundo e tente se acalmar! 😡')">
+
+        <img src="raiva.png" alt="Raiva">
+
         Raiva
     </div>
 
-    <div class="emocao" id="medo" onclick="mostrar('Medo: ter medo é normal, mas você pode enfrentar seus desafios! 😨')">
+    <!-- MEDO -->
+    <div class="emocao" id="medo"
+        onclick="mostrar('Medo: ter medo é normal, mas podemos enfrentar nossos desafios! 😨')">
+
+        <img src="medo.png" alt="Medo">
+
         Medo
     </div>
 
-    <div class="emocao" id="nojinho" onclick="mostrar('Nojinho: algumas coisas simplesmente não são agradáveis! 🤢')">
+    <!-- NOJINHO -->
+    <div class="emocao" id="nojinho"
+        onclick="mostrar('Nojinho: algumas coisas simplesmente não são agradáveis! 🤢')">
+
+        <img src="nojinho.png" alt="Nojinho">
+
         Nojinho
     </div>
 
