@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Divertida Mente</title>
 
     <style>
@@ -12,18 +11,17 @@
             margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-            background: linear-gradient(135deg, #dff6ff, #fff3d6);
+            background: linear-gradient(135deg, #16005c, #00a6ff);
+            color: white;
         }
 
         h1 {
-            font-size: 45px;
-            color: #ff6b35;
+            font-size: 50px;
             margin-top: 30px;
         }
 
         p {
-            font-size: 20px;
-            color: #333;
+            font-size: 21px;
         }
 
         .container {
@@ -31,35 +29,64 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 25px;
-            margin-top: 30px;
+            margin: 40px;
         }
 
         .emocao {
-            width: 180px;
-            height: 250px;
+            width: 190px;
+            height: 270px;
             border-radius: 25px;
             padding: 15px;
             color: white;
-            font-size: 24px;
+            font-size: 25px;
             font-weight: bold;
             cursor: pointer;
 
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-
-            transition: transform 0.3s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: 0.3s;
         }
 
         .emocao:hover {
             transform: scale(1.08);
         }
 
-        .emocao img {
-            width: 160px;
-            height: 190px;
-            object-fit: contain;
+        .personagem {
+            width: 170px;
+            height: 200px;
+
+            background-image: url("https://cdn.eadplataforma.app/client/eadsinapses/upload/crop/product/photo/011220201606821824image2.jpg-product-photo-detail-mobile.jpg");
+
+            background-size: 850px 850px;
+            background-repeat: no-repeat;
+
+            margin: auto;
+            border-radius: 20px;
         }
 
-        /* Cores das emoções */
+        /* Personagens */
+
+        .alegria-img {
+            background-position: -300px -20px;
+        }
+
+        .tristeza-img {
+            background-position: 20px -20px;
+        }
+
+        .raiva-img {
+            background-position: -300px -300px;
+        }
+
+        .medo-img {
+            background-position: -170px -100px;
+        }
+
+        .nojinho-img {
+            background-position: -570px -100px;
+        }
+
+
+        /* Cores */
 
         #alegria {
             background-color: #FFD21F;
@@ -81,44 +108,49 @@
             background-color: #48A868;
         }
 
+
         #mensagem {
-            margin: 40px auto;
-            padding: 20px;
+            background-color: white;
+            color: #222;
+
             max-width: 700px;
+            margin: 20px auto 50px;
+
+            padding: 25px;
+
+            border-radius: 20px;
 
             font-size: 24px;
             font-weight: bold;
 
-            background-color: white;
-            border-radius: 20px;
-
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
 
     </style>
 </head>
 
+
 <body>
 
-    <h1>🧠 Divertida Mente</h1>
+    <h1>🧠 DIVERTIDA MENTE</h1>
 
     <p>
         Conheça as emoções de Riley!
+        <br>
         Clique em um personagem.
     </p>
 
 
     <div class="container">
 
+
         <!-- ALEGRIA -->
 
         <div class="emocao"
              id="alegria"
-             onclick="mostrar('😊 Alegria: representa a felicidade e tenta deixar Riley feliz!')">
+             onclick="mostrar('😊 Alegria representa a felicidade e tenta manter Riley otimista!')">
 
-            <img src="alegria.png" alt="Alegria">
-
-            <br>
+            <div class="personagem alegria-img"></div>
 
             Alegria
 
@@ -129,11 +161,9 @@
 
         <div class="emocao"
              id="tristeza"
-             onclick="mostrar('💙 Tristeza: mostra que ficar triste também faz parte da vida.')">
+             onclick="mostrar('💙 Tristeza mostra que ficar triste também é importante.')">
 
-            <img src="tristeza.png" alt="Tristeza">
-
-            <br>
+            <div class="personagem tristeza-img"></div>
 
             Tristeza
 
@@ -144,11 +174,9 @@
 
         <div class="emocao"
              id="raiva"
-             onclick="mostrar('😡 Raiva: aparece quando Riley fica irritada ou acha que algo é injusto.')">
+             onclick="mostrar('😡 Raiva aparece quando Riley fica irritada ou acha algo injusto.')">
 
-            <img src="raiva.png" alt="Raiva">
-
-            <br>
+            <div class="personagem raiva-img"></div>
 
             Raiva
 
@@ -159,11 +187,9 @@
 
         <div class="emocao"
              id="medo"
-             onclick="mostrar('😨 Medo: tenta proteger Riley de situações perigosas.')">
+             onclick="mostrar('😨 Medo tenta proteger Riley de situações perigosas.')">
 
-            <img src="medo.png" alt="Medo">
-
-            <br>
+            <div class="personagem medo-img"></div>
 
             Medo
 
@@ -174,11 +200,9 @@
 
         <div class="emocao"
              id="nojinho"
-             onclick="mostrar('🤢 Nojinho: ajuda Riley a evitar coisas desagradáveis.')">
+             onclick="mostrar('🤢 Nojinho ajuda Riley a evitar coisas desagradáveis.')">
 
-            <img src="nojinho.png" alt="Nojinho">
-
-            <br>
+            <div class="personagem nojinho-img"></div>
 
             Nojinho
 
@@ -188,7 +212,7 @@
 
 
     <div id="mensagem">
-        Clique em uma emoção! 👆
+        👆 Clique em uma emoção para saber mais!
     </div>
 
 
@@ -203,6 +227,7 @@
     </script>
 
 </body>
+
 </html>
 
 
